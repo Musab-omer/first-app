@@ -1,13 +1,17 @@
 
 import './App.css';
 import MessageCard from "./components/MessageCard";
+import DataCard from "./components/DataCard";
 
 function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <h1>Welcome to React JS App Component</h1>
+        <nav>
+          <a href='#'>React with CSS Styles</a>
+        </nav>
         <MessageCard/>
+        <DataCard/>
       </header>
     </div>
   );
