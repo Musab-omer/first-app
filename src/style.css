@@ -1,0 +1,22 @@
+.btn-primary , .bg-priamy{
+    background:linear-gradient(45deg,black,blueviolet);
+}
+.btn-danger ,.bg-danger{
+    background:linear-gradient(45deg,black,red);
+}
+.btn-secondary, .bg-secondary{
+    background:linear-gradient(45deg,black,purple);
+}
+.btn-success , .bg-success{
+    background:linear-gradient(45deg,black,limegreen);
+}
+.btn-info , .bg-info{
+    background:linear-gradient(45deg,black,lightblue);
+}
+.btn-warning , .bg-warning{
+    background:linear-gradient(45deg,black,orange);
+}
+
+.rounded-top-left{
+    border-radius:50px 0 0 0;
+}
