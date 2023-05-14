@@ -1,0 +1,15 @@
+To use bootstrap in React we need to install :
+ 
+ Note: You can get all command form npmjs.com
+
+1. fontawesome  => npm i --save @fortawesome/fontawesome-free
+2. bootstrap.css => npm i bootstrap
+3. mdbootstrap.css => npm i mdbootstrap
+4.our custom style
+
+-> After that we need to configure the files in "index.js" file
+-> add font-awesome online link in "index.html" https://use.fontawesome.com/releases/v5.8.1/css/all.css\
+
+React Expression -> {}
+
+props consept -> you can send data form one component to another exatly form Parent to child 
