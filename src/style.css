@@ -1,5 +1,5 @@
 .btn-primary , .bg-priamy{
-    background:linear-gradient(45deg,black,blueviolet);
+    background:linear-gradient(45deg,black,blue);
 }
 .btn-danger ,.bg-danger{
     background:linear-gradient(45deg,black,red);
