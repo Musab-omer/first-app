@@ -9,42 +9,42 @@ class Footer extends React.Component {
                         <div className="row">
                             <div className="col-md-3 col-sm-6">
                                 {/* col1 */}
-                                <h4>section 1</h4>
+                                <h4>Contact us</h4>
                                 <ul className="list-unstyled">
-                                    <li>Lorem 1</li>
-                                    <li>Lorem 2</li>
-                                    <li>Lorem 3</li>
-                                    <li>Lorem 3</li>
+                                    <li>Sudan</li>
+                                    <li>Khartoum</li>
+                                    <li>musab.katry@gmail.com</li>
+                                    <li>+2031231231</li>
                                 </ul>
                             </div>
                             <div className="col-md-3 col-sm-6">
                                 {/* col1 */}
                                 <h4>section 1</h4>
                                 <ul className="list-unstyled">
-                                    <li>Lorem 1</li>
-                                    <li>Lorem 2</li>
-                                    <li>Lorem 3</li>
-                                    <li>Lorem 3</li>
+                                    <li><a href="/">Lorem 1</a></li>
+                                    <li><a href="/">Lorem 2</a></li>
+                                    <li><a href="/">Lorem 3</a></li>
+                                    <li><a href="/">Lorem 4</a></li>
                                 </ul>
                             </div>
                             <div className="col-md-3 col-sm-6">
                                 {/* col1 */}
                                 <h4>section 1</h4>
                                 <ul className="list-unstyled">
-                                    <li>Lorem 1</li>
-                                    <li>Lorem 2</li>
-                                    <li>Lorem 3</li>
-                                    <li>Lorem 3</li>
+                                <li><a href="/">Lorem 1</a></li>
+                                    <li><a href="/">Lorem 2</a></li>
+                                    <li><a href="/">Lorem 3</a></li>
+                                    <li><a href="/">Lorem 4</a></li>
                                 </ul>
                             </div>
                             <div className="col-md-3 col-sm-6">
                                 {/* col1 */}
                                 <h4>section 1</h4>
                                 <ul className="list-unstyled">
-                                    <li>Lorem 1</li>
-                                    <li>Lorem 2</li>
-                                    <li>Lorem 3</li>
-                                    <li>Lorem 3</li>
+                                <li><a href="/">Lorem 1</a></li>
+                                    <li><a href="/">Lorem 2</a></li>
+                                    <li><a href="/">Lorem 3</a></li>
+                                    <li><a href="/">Lorem 4</a></li>
                                 </ul>
                             </div>
                         </div>
