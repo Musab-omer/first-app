@@ -4,7 +4,7 @@ class Contact extends React.Component {
     render() {
         return (
             <React.Fragment>
-                <div className="container mb-5">
+                <div className="container mb-3 mt-3">
                     <div className="row">
                         <div className="col-md-6">
                             <div className="card bg-secondary btn mt-3">
