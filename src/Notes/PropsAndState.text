@@ -1,0 +1,20 @@
+Props & State 
+----------------
+
+-> porps -> send data from one component to another component (parent an child component)
+
+ <ParentCard>
+ ......
+
+ <ChildCard namd="Musab" age="45" />  if it's class base compoent we use props as -> this.props.name to access the props data and if it's function base compoent we use onle -> props.name
+ </ParentCard>
+
+ -> props object will look like 
+
+ props ={
+    name:'Musab',
+    age:45
+ };
+
+
+ -> State -> 
