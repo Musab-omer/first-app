@@ -10,7 +10,7 @@ class Countries extends React.Component {
         let Prograph=['Plunge into the pleasures of the 4-star Mercure Hurghada Hotel - literally! Explore some of the most spectacular coral reefs in the world at this all-inclusive holiday resort on the edge of the crystal-clear Red Sea. ','Plunge into the pleasures of the 4-star Mercure Hurghada Hotel - literally! Explore some of the most spectacular coral reefs in the world at this all-inclusive holiday resort on the edge of the crystal-clear Red Sea. ','Plunge into the pleasures of the 4-star Mercure Hurghada Hotel - literally! Explore some of the most spectacular coral reefs in the world at this all-inclusive holiday resort on the edge of the crystal-clear Red Sea. ','Plunge into the pleasures of the 4-star Mercure Hurghada Hotel - literally! Explore some of the most spectacular coral reefs in the world at this all-inclusive holiday resort on the edge of the crystal-clear Red Sea. ']
         return (
             <React.Fragment>
-                <div className="container mt-2">
+                <div className="container mt-4 mb-3">
                     <div className="row">
                         <div className="col-md-3">
                             <CountryCard countryName={Name[0]} countryImage={img1} countryPrograph={Prograph[0]}/>
