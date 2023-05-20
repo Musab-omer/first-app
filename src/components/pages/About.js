@@ -8,7 +8,7 @@ class About extends React.Component{
     render(){
         return(
             <React.Fragment>
-                <div className="  mt-3 p-3 bg-secondary text-white text-center d-flex flex-column justfy-content-center">
+                <div className="  mt-3 mb-3 p-3 bg-secondary text-white text-center d-flex flex-column justfy-content-center">
                     <div className="container">
                     <h3 className="display-5">Mercure Hurghada Hotel </h3>
                     <p>Plunge into the pleasures of the 4-star Mercure Hurghada Hotel - literally! Explore some of the most spectacular coral reefs in the world at this all-inclusive holiday resort on the edge of the crystal-clear Red Sea.</p>
