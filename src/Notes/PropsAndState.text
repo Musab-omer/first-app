@@ -17,4 +17,6 @@ Props & State
  };
 
 
- -> State -> 
+ -> State -> is used to mange data within component itself
+
+ 
