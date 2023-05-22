@@ -1,0 +1,8 @@
+html -> onclik ="greet()"
+JSX -> onClick ="greet"
+
+-> to convert object to string for purpos of printing on the screen we use global object -> 
+JSON.stringfy(object);
+
+-> spreed operator : is used to copy part or all an existing array object to new array or object 
+we use three dot ... to indecate spread operator for example ...this.state.product 
