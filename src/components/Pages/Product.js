@@ -1,20 +1,28 @@
 import React from "react";
 
 class Product extends React.Component {
-    constructor(props){
+    constructor(props) {
         super(props);
-        this.state={
-            product:{
-                id:'AA45BB#',
-                image:'https://assets.swappie.com/cdn-cgi/image/width=600,height=600,dpr=2,fit=contain,format=auto/swappie-iphone-13-pro-max-gold.png?v=34',
-                name:'Iphone 13 pro max',
-                price:1039,
-                qty:5
+        this.state = {
+            product: {
+                id: 'AA45BB#',
+                image: 'https://assets.swappie.com/cdn-cgi/image/width=600,height=600,dpr=2,fit=contain,format=auto/swappie-iphone-13-pro-max-gold.png?v=34',
+                name: 'Iphone 13 pro max',
+                price: 1039,
+                qty: 5
             }
         }
     }
+
+    degreasedQty =()=>{
+        alert('Qty degreased');
+    }
+
+    ingreasedQty=()=>{
+        alert('Qty ingreased');
+    }
     render() {
-        
+        let { id, image, name, price, qty } = this.state.product;
         return (
             <React.Fragment>
                 <div className="container mt-3">
@@ -41,11 +49,15 @@ class Product extends React.Component {
                                 <tbody>
                                     <tr>
                                         <td>AA45BB#</td>
-                                        <td><img src={this.state.product.image} className="" width="50" height="50" alt="productImage"/></td>
-                                        <td>{this.state.product.name}</td>
-                                        <td>{this.state.product.price}</td>
-                                        <td>{this.state.product.qty}</td>
-                                        <td>{this.state.product.price * this.state.product.qty}</td>
+                                        <td><img src={image} className="" width="50" height="50" alt="productImage" /></td>
+                                        <td>{name}</td>
+                                        <td>{price}</td>
+                                        <td>
+                                            <i className="fa fa-minus-circle mx-2" onClick={this.degreasedQty}/>
+                                            {qty}
+                                            <i className="fa fa-plus-circle mx-2" onClick={this.ingreasedQty}/>
+                                        </td>
+                                        <td>{price * qty}</td>
                                     </tr>
                                 </tbody>
                             </table>
