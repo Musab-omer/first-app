@@ -14,12 +14,26 @@ class Product extends React.Component {
         }
     }
 
-    degreasedQty =()=>{
-        alert('Qty degreased');
+    decreaseQty =()=>{
+       this.setState(
+        {
+            product:{
+                ...this.state.product,
+                qty:(this.state.product.qty-1)>1? this.state.product.qty-1:1
+            }
+        }
+       );
     }
 
-    ingreasedQty=()=>{
-        alert('Qty ingreased');
+    increaseQty=()=>{
+      this.setState(
+        {
+            product:{
+                ...this.state.product,
+                qty:this.state.product.qty+1
+            }
+        }
+      );
     }
     render() {
         let { id, image, name, price, qty } = this.state.product;
@@ -35,6 +49,7 @@ class Product extends React.Component {
 
                     <div className="row">
                         <div className="col">
+                            <pre>{JSON.stringify(this.state.product)}</pre>
                             <table className="table table-hover table-striped table-dark">
                                 <thead>
                                     <tr>
@@ -48,16 +63,16 @@ class Product extends React.Component {
                                 </thead>
                                 <tbody>
                                     <tr>
-                                        <td>AA45BB#</td>
+                                        <td>{id}</td>
                                         <td><img src={image} className="" width="50" height="50" alt="productImage" /></td>
                                         <td>{name}</td>
-                                        <td>{price}</td>
+                                        <td>&euro; {price.toFixed(2)}</td>
                                         <td>
-                                            <i className="fa fa-minus-circle mx-2" onClick={this.degreasedQty}/>
+                                            <i className="fa fa-minus-circle mx-2" onClick={this.decreaseQty}/>
                                             {qty}
-                                            <i className="fa fa-plus-circle mx-2" onClick={this.ingreasedQty}/>
+                                            <i className="fa fa-plus-circle mx-2" onClick={this.increaseQty}/>
                                         </td>
-                                        <td>{price * qty}</td>
+                                        <td>&euro; {(price * qty).toFixed(2)}</td>
                                     </tr>
                                 </tbody>
                             </table>
