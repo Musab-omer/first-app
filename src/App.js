@@ -4,6 +4,7 @@ import CarSelector from './components/Pages/CarSelector';
 import MessageCard from './components/Pages/MessageCard';
 
 import Navbar from "./components/layouts/Navbar";
+import Register from './components/Pages/Register';
 
 function App() {
   return (
@@ -12,8 +13,9 @@ function App() {
         <Navbar />
         {/* <MessageCard/> */}
         {/* <CarSelector /> */}
+        {/* <SMSApp/> */}
 
-        <SMSApp/>
+        <Register/>
       </header>
     </div>
   );
