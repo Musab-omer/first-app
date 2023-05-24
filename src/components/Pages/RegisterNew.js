@@ -1,5 +1,5 @@
 import { Component, Fragment } from "react";
-import Register from "./Register";
+
 
 class RegisterNew extends Component {
     constructor(props) {
@@ -17,21 +17,25 @@ class RegisterNew extends Component {
     }
 
     //very best way to do this job with on method only 
-    updateInput1 = (event) => {
+    updateInput = (event) => {
         switch (event.target.type) {
             case "checkbox":
                 this.setState(
                     {
-                        ...this.state.userRegister,
-                        userRegister:{ [event.target.name]: event.target.checked }
+                        userRegister: {
+                            ...this.state.userRegister,
+                            [event.target.name]: event.target.checked
+                        }
                     }
                 );
                 break;
             default:
                 this.setState(
                     {
-                        ...this.state.userRegister,
-                        userRegister:{ [event.target.name]: event.target.value }
+                        userRegister: {
+                            ...this.state.userRegister,
+                            [event.target.name]: event.target.value
+                        }
                     }
                 );
         }
@@ -44,7 +48,7 @@ class RegisterNew extends Component {
         console.log(this.state);
     }
     render() {
-        const {userName,email,password,confPassword,designation,termsConditions} = this.state.userRegister;
+        const { userName, email, password, confPassword, designation, termsConditions } = this.state.userRegister;
         return (
             <Fragment>
                 <div className="container mt-3">
@@ -61,39 +65,37 @@ class RegisterNew extends Component {
                                             <input type="text" className="form-control"
                                                 value={userName}
                                                 name="userName"
-                                                onChange={this.updateInput1}
-                                                // onChange={this.updateInput.bind(this, "userName")}
+                                                onChange={this.updateInput}
                                                 placeholder="User Name" />
                                         </div>
                                         <div className="form-group">
                                             <input type="email" className="form-control"
                                                 value={email}
                                                 name="email"
-                                                onChange={this.updateInput1}
-                                                // onChange={this.updateInput.bind(this, "email")}
+                                                onChange={this.updateInput}
+
                                                 placeholder="Email" />
                                         </div>
                                         <div className="form-group">
                                             <input type="password" className="form-control"
                                                 value={password}
                                                 name="password"
-                                                onChange={this.updateInput1}
-                                                // onChange={this.updateInput.bind(this, "password")}
+                                                onChange={this.updateInput}
+
                                                 placeholder="Password" />
                                         </div>
                                         <div className="form-group">
                                             <input type="password" className="form-control"
                                                 value={confPassword}
                                                 name="confPassword"
-                                                onChange={this.updateInput1}
-                                                // onChange={this.updateInput.bind(this, "confPassword")}
+                                                onChange={this.updateInput}
+
                                                 placeholder="Confirm Password" />
                                         </div>
                                         <div className="form-group">
                                             <select className="form-control"
                                                 name="designation"
-                                                onChange={this.updateInput1}
-                                            // onChange={this.updateInput.bind(this, "designation")}
+                                                onChange={this.updateInput}
                                             >
                                                 <option value="">Select Designation</option>
                                                 <option value="Software Engineer">Software Engineer</option>
@@ -106,8 +108,8 @@ class RegisterNew extends Component {
                                         <div className="form-check">
                                             <input type="checkbox" id="terms"
                                                 name="termsConditions"
-                                                // onClick={this.updateTerms}
-                                                onClick={this.updateInput1}
+
+                                                onClick={this.updateInput}
                                                 className="form-check-input" />
                                             <label className="form-check-label">Accept Terms & Conditions</label>
                                         </div>
@@ -119,23 +121,7 @@ class RegisterNew extends Component {
                                 </div>
                             </div>
                         </div>
-                        <div className="col-md-8">
-                            <div className="card">
-                                <div className="card-header bg-success text-white">
-                                    <p className="h4">Registeration Details</p>
-                                </div>
-                                <div className="card-body bg-light">
-                                    <ul className="list-group">
-                                        <li className="list-group-item">User Name : {userName}</li>
-                                        <li className="list-group-item">Email : {email}</li>
-                                        <li className="list-group-item">Password : {password}</li>
-                                        <li className="list-group-item">Confiermed Password : {confPassword}</li>
-                                        <li className="list-group-item">Designation : {designation}</li>
-                                        <li className="list-group-item">Terms & Conditions : {termsConditions}</li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
+
                     </div>
                 </div>
             </Fragment>
