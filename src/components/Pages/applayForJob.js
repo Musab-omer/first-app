@@ -1,15 +1,15 @@
-import {Component,Fragment} from "react".
+import { Component, Fragment } from "react".
 
-class applayForJob extends Component{
-    constructor(props){
+class applayForJob extends Component {
+    constructor(props) {
         super(props);
     }
-   render(){
-    return(
-        <Fragment>
+    render() {
+        return (
+            <Fragment>
 
-        </Fragment>
-    );
-   }
+            </Fragment>
+        );
+    }
 }
 export default applayForJob;
