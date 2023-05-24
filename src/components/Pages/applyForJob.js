@@ -1,14 +1,15 @@
-import { Component, Fragment } from "react".
+// import { Component, Fragment } from "react";
+import React from "react";
 
-class applyForJob extends Component {
+class applyForJob extends React.Component {
     constructor(props) {
         super(props);
     }
     render() {
         return (
-            <Fragment>
-
-            </Fragment>
+            <React.Fragment>
+            <h2>From Application form</h2>
+            </React.Fragment>
         );
     }
 }
