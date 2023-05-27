@@ -1,5 +1,6 @@
 import './App.css';
 import Navbar from "./components/layouts/Navbar";
+import ApplicationForm from './components/Pages/ApplicationForm';
 import ApplyForJob from "./components/Pages/applyForJob";
 
 function App() {
@@ -8,7 +9,9 @@ function App() {
       <header className="App-header">
         <Navbar />
 
-        <ApplyForJob />
+        {/* <ApplyForJob /> */}
+
+        <ApplicationForm/>
       </header>
     </div>
   );
