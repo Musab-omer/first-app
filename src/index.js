@@ -7,9 +7,9 @@ import reportWebVitals from './reportWebVitals';
 
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'mdbootstrap/css/mdb.min.css';
-import './style.css';
-import 'bootstrap/js/dist/collapse';
 
+import 'bootstrap/js/dist/collapse';
+import './style.css';
 
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
