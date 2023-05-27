@@ -8,6 +8,7 @@ class applyForJob extends React.Component {
     render() {
         return (
             <React.Fragment>
+                {/* prsonal information */}
                 <div className="container mt-5">
                     <div className="row">
                         <div className="col">
@@ -171,6 +172,50 @@ class applyForJob extends React.Component {
                         </div>
                     </div>
                 </div>
+
+                {/* education details */}
+                <div className="container mt-5">
+                    <div className="row">
+                        <div className="col-md-12">
+                            <div className="card">
+                                <div className="card-header bg-dark text-white">
+                                    <p className="h4">Education Details</p>
+                                </div>
+                                <div className="card-body bg-light">
+
+                                    <table class="table table-dark">
+                                        <thead>
+                                            <tr>
+                                                <th scope="col">#</th>
+                                                <th scope="col">Qualifcation</th>
+                                                <th scope="col">Institure/ University</th>
+                                                <th scope="col">Year of Passing</th>
+                                                <th scope="col">Marks (%)</th>
+                                                <th scope="col">Action</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <th scope="col">1</th>
+                                                <td><input type="text" /></td>
+                                                <td><input type="text" /></td>
+                                                <td><input type="date" /></td>
+                                                <td><input type="number" /></td>
+                                                <td className="d-flex justify-content-between">
+                                                    <a href="/" ><i className="fa fa-plus-circle fa-lg text-success" /></a>
+                                                    <a href="/"><i className="fa fa-pen fa-lg text-warning" /></a>
+                                                    <a href="/"><i className="fa fa-trash fa-lg text-danger" /></a>
+
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div className="mb-5"></div>
             </React.Fragment>
         );
     }
