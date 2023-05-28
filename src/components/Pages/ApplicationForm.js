@@ -37,21 +37,80 @@ class ApplicationForm extends React.Component {
                 sleeping: false
             },
 
-            otherDetails:{
-                jobType:'',
-                doj:'',
-                toj:'',
-                preferredLocation:'',
-                relocateToKhartoum:false,
-                terms:false
+            otherDetails: {
+                jobType: '',
+                doj: '',
+                toj: '',
+                preferredLocation: '',
+                relocateToKhartoum: '',
+                terms: false
             }
 
         }
     }
 
+    updateInput = (event) => {
+        //alert(event.target.id);
+        switch (event.target.type) {
+            case "radio":
+                this.setState(
+                    {
+                        ...this.state,
+                        personalInformation: {
+                            ...this.state.personalInformation,
+                            [event.target.name]: event.target.id
+                        },
+                        otherDetails:{
+                            ...this.state.otherDetails,
+                            [event.target.name] :event.target.id
+                        }
+                    }
+                );
+                break;
+            case "checkbox":
+                this.setState(
+                    {
+                        ...this.state,
+                        hobies: {
+                            ...this.state.hobies,
+                            [event.target.name]: event.target.checked
+                        },
+                        otherdetails:{
+                            ...this.state.otherdetails,
+                            [event.target.name]:event.target.checked
+                        }
+                    }
+                );
+                break;
+
+            default:
+                this.setState(
+                    {
+                        ...this.state,
+                        personalInformation: {
+                            ...this.state.personalInformation,
+                            [event.target.name]: event.target.value
+                        },
+                        contactInformation: {
+                            ...this.state.contactInformation,
+                            [event.target.name]: event.target.value
+                        },
+                        otherDetails:{
+                            ...this.state.otherDetails,
+                            [event.target.name]:event.target.value
+                        }
+
+                    }
+                );
+
+        }
+
+    }
+
     submitForm = (event) => {
         event.preventDefault();
-        alert("Hello Musab  !");
+        //alert("Hello Musab  !");
+        console.log(this.state);
     }
 
     addEducationDetailsrow = () => {
@@ -101,34 +160,48 @@ class ApplicationForm extends React.Component {
                             <div className="form-row">
                                 <div className="form-group col-md-4">
                                     <label for="firstName">First Name </label>
-                                    <input type="text" className="form-control" name="firstName" placeholder="First Name" />
+                                    <input type="text" className="form-control"
+                                        value={this.state.personalInformation.firstName}
+                                        onChange={this.updateInput} name="firstName" placeholder="First Name" />
                                 </div>
                                 <div className="form-group col-md-4">
-                                    <label for="lastName">Middle Name</label>
-                                    <input type="text" className="form-control" name="middleName" placeholder="Middle Name" />
+                                    <label for="middleName">Middle Name</label>
+                                    <input type="text" className="form-control" name="middleName"
+                                        onChange={this.updateInput}
+                                        placeholder="Middle Name" />
                                 </div>
                                 <div className="form-group col-md-4">
                                     <label for="lastName">Last Name</label>
-                                    <input type="text" className="form-control" name="lastName" placeholder="Last Name" />
+                                    <input type="text" className="form-control"
+                                        value={this.state.personalInformation.lastName}
+                                        onChange={this.updateInput}
+                                        name="lastName" placeholder="Last Name" />
                                 </div>
                             </div>
                             <div className="form-row">
                                 <div className="form-group col-md-4">
                                     <label for="fatherName">Father's Name</label>
-                                    <input type="text" className="form-control" name="fatherName" placeholder="Father's Name" />
+                                    <input type="text" className="form-control"
+
+                                        value={this.state.personalInformation.fatherName}
+                                        onChange={this.updateInput}
+                                        name="fatherName" placeholder="Father's Name" />
                                 </div>
                                 <div className="form-group col-md-4">
                                     <label for="motherName">Mother's Name</label>
-                                    <input type="text" className="form-control" name="motherName" placeholder="Mother's Name" />
+                                    <input type="text" className="form-control"
+                                        value={this.state.personalInformation.motherName}
+                                        onChange={this.updateInput}
+                                        name="motherName" placeholder="Mother's Name" />
                                 </div>
                                 <div className="form-group col-md-2">
                                     <label for="gender">Select Gender</label>
                                     <div class="custom-control custom-radio custom-control-inline">
-                                        <input type="radio" id="male" name="gender" class="custom-control-input" />
+                                        <input type="radio" id="male" name="gender" onChange={this.updateInput} class="custom-control-input" />
                                         <label class="custom-control-label" for="male">Male</label>
                                     </div>
                                     <div class="custom-control custom-radio custom-control-inline">
-                                        <input type="radio" id="female" name="gender" class="custom-control-input" />
+                                        <input type="radio" id="female" name="gender" onChange={this.updateInput} class="custom-control-input" />
                                         <label class="custom-control-label" for="female">Female</label>
                                     </div>
                                 </div>
@@ -137,7 +210,10 @@ class ApplicationForm extends React.Component {
                             <div className="form-row">
                                 <div className="form-group col-md-4">
                                     <label for="nationality">Nationality</label>
-                                    <select name="nationality" id="nationality" className="custom-select">
+                                    <select name="nationality" id="nationality"
+                                        value={this.state.personalInformation.nationality}
+                                        onChange={this.updateInput}
+                                        className="custom-select">
                                         <option value="">Select Your Nationality</option>
                                         <option value="Sudanese">Sudanese</option>
                                         <option value="Egyptian">Egyptian</option>
@@ -149,23 +225,35 @@ class ApplicationForm extends React.Component {
 
                                 <div className="form-group col-md-4">
                                     <label for="IDCard">National ID Card Number</label>
-                                    <input type="text" name="IDCard" id="IDCard" className="form-control" />
+                                    <input type="text" name="IDC" id="IDCard"
+                                        value={this.state.personalInformation.IDC}
+                                        onChange={this.updateInput}
+                                        className="form-control" />
                                 </div>
 
                                 <div className="form-group col-md-4">
                                     <label for="passport">Passport Number</label>
-                                    <input type="text" name="passport" id="passport" className="form-control" />
+                                    <input type="text" name="passport" id="passport"
+                                        value={this.state.personalInformation.passport}
+                                        onChange={this.updateInput}
+                                        className="form-control" />
                                 </div>
                             </div>
 
                             <div className="form-row">
                                 <div className="form-group col-md-3 ">
                                     <label for="dateOfBirht">Date of Birth</label>
-                                    <input type="date" name="dateOfBirht" className="form-control" placeholder="" />
+                                    <input type="date" name="dob" id="dateOfBirht"
+                                        value={this.state.personalInformation.dob}
+                                        onChange={this.updateInput}
+                                        className="form-control" placeholder="" />
                                 </div>
                                 <div className="form-group col-md-3">
                                     <label for="placeOfBirth">Place of Birth</label>
-                                    <input type="text" name="placeOfBirth" className="form-control" placeholder="city,area" />
+                                    <input type="text" name="pob" id="placeOfBirth"
+                                        value={this.state.personalInformation.pob}
+                                        onChange={this.updateInput}
+                                        className="form-control" placeholder="city,area" />
                                 </div>
                             </div>
                             <div className="form-group float-right">
@@ -177,21 +265,33 @@ class ApplicationForm extends React.Component {
                             <legend className="bg-info text-white p-2  responsive-font-example shadow border border-primary">Contact Information</legend>
                             <div className="form-group">
                                 <label for="currentAddress">Current Address</label>
-                                <input type="text" className="form-control" name="currentAddress" placeholder="1234 Main St" />
+                                <input type="text" className="form-control" name="currentAddress"
+                                    value={this.state.contactInformation.currentAddress}
+                                    onChange={this.updateInput}
+                                    placeholder="1234 Main St" />
                             </div>
                             <div className="form-group">
                                 <label for="permanentAddress">Permanent Address</label>
-                                <input type="text" className="form-control" name="parmanentAddress" placeholder="Apartment,studio, or floor" />
+                                <input type="text" className="form-control" name="permanentAddress"
+                                    value={this.state.contactInformation.permanentAddress}
+                                    onChange={this.updateInput}
+                                    placeholder="Apartment,studio, or floor" />
                             </div>
 
                             <div className="form-row">
                                 <div className="form-group col-md-3">
                                     <label for="landingNumber">Landing Number</label>
-                                    <input type="text" name="landingNumber" className="form-control" placeholder="W 000 000 000" />
+                                    <input type="text" name="landingNumber"
+                                        value={this.state.contactInformation.landingNumber}
+                                        onChange={this.updateInput}
+                                        className="form-control" placeholder="W 000 000 000" />
                                 </div>
                                 <div className="form-group col-md-3">
                                     <label for="phoneNumber">Phone Number</label>
-                                    <input type="tel" name="phoneNumber" className="form-control" placeholder="" />
+                                    <input type="tel" name="phoneNumber"
+                                        value={this.state.contactInformation.phoneNumber}
+                                        onChange={this.updateInput}
+                                        className="form-control" placeholder="" />
                                 </div>
                             </div>
                             <div className="form-group float-right">
@@ -205,21 +305,29 @@ class ApplicationForm extends React.Component {
                                 <div className="form-group col-md-8">
                                     <label for="langKnown">languages known</label>
                                     <div className="custom-control custom-checkbox custom-control-inline ml-3">
-                                        <input type="checkbox" name="arabic" id="arabic" className="custom-control-input"></input>
+                                        <input type="checkbox" name="arabic" id="arabic"
+                                            onChange={this.updateInput}
+                                            className="custom-control-input"></input>
                                         <label for="arabic" className="custom-control-label">Arabic</label>
                                     </div>
 
                                     <div className="custom-control custom-checkbox custom-control-inline">
-                                        <input type="checkbox" name="english" id="english" className="custom-control-input" />
+                                        <input type="checkbox" name="english" id="english"
+                                            onChange={this.updateInput}
+                                            className="custom-control-input" />
                                         <label for="english" className="custom-control-label">English</label>
                                     </div>
 
                                     <div className="custom-control custom-checkbox custom-control-inline">
-                                        <input type="checkbox" name="chines" id="chines" className="custom-control-input" />
+                                        <input type="checkbox" name="chines" id="chines"
+                                            onChange={this.updateInput}
+                                            className="custom-control-input" />
                                         <label for="chines" className="custom-control-label">Chines</label>
                                     </div>
                                     <div className="custom-control custom-checkbox custom-control-inline">
-                                        <input type="checkbox" name="french" id="french" className="custom-control-input" />
+                                        <input type="checkbox" name="french" id="french"
+                                            onChange={this.updateInput}
+                                            className="custom-control-input" />
                                         <label for="french" className="custom-control-label">French</label>
                                     </div>
                                 </div>
@@ -229,22 +337,30 @@ class ApplicationForm extends React.Component {
                                 <div className="form-group col-md-8">
                                     <label for="hobies">Select Your Hobies</label>
                                     <div className="custom-control custom-checkbox custom-control-inline ml-2">
-                                        <input type="checkbox" name="traveling" id="traveling" className="custom-control-input" />
+                                        <input type="checkbox" name="traveling" id="traveling"
+                                            onChange={this.updateInput}
+                                            className="custom-control-input" />
                                         <label for="traveling" className="custom-control-label" >Traveling</label>
                                     </div>
 
                                     <div className="custom-control custom-checkbox custom-control-inline">
-                                        <input type="checkbox" name="shopping" id="shopping" className="custom-control-input" />
+                                        <input type="checkbox" name="shopping" id="shopping"
+                                            onChange={this.updateInput}
+                                            className="custom-control-input" />
                                         <label for="shopping" className="custom-control-label">Shopping</label>
                                     </div>
 
                                     <div className="custom-control custom-checkbox custom-control-inline">
-                                        <input type="checkbox" name="coding" id="coding" className="custom-control-input" />
+                                        <input type="checkbox" name="coding" id="coding"
+                                            onChange={this.updateInput}
+                                            className="custom-control-input" />
                                         <label for="coding" className="custom-control-label">Coding</label>
                                     </div>
 
                                     <div className="custom-control custom-checkbox custom-control-inline">
-                                        <input type="checkbox" name="sleeping" id="sleep" className="custom-control-input" />
+                                        <input type="checkbox" name="sleeping" id="sleep"
+                                            onChange={this.updateInput}
+                                            className="custom-control-input" />
                                         <label for="sleep" className="custom-control-label">Sleeping</label>
                                     </div>
                                 </div>
@@ -340,19 +456,25 @@ class ApplicationForm extends React.Component {
                                 </div>
                                 <div className="form-check col-md-3">
                                     <div className="custom-control custom-radio custom-control-inline">
-                                        <input type="radio" className="custom-control-input" id="parmanent" name="jobType" />
+                                        <input type="radio" className="custom-control-input" id="parmanent"
+                                        onChange={this.updateInput}
+                                        name="jobType" />
                                         <label for="parmanent" className="custom-control-label">Parmanent</label>
                                     </div>
                                 </div>
                                 <div className="form-check col-md-3">
                                     <div className="custom-control custom-radio custom-control-inline">
-                                        <input type="radio" className="custom-control-input" id="contract" name="jobType" />
+                                        <input type="radio" className="custom-control-input" id="contract"
+                                        onChange={this.updateInput}
+                                        name="jobType" />
                                         <label for="contract" className="custom-control-label">Contract</label>
                                     </div>
                                 </div>
                                 <div className="form-check col-md-3">
                                     <div className="custom-control custom-radio custom-control-inline">
-                                        <input type="radio" className="custom-control-input" id="other" name="jobType" />
+                                        <input type="radio" className="custom-control-input" id="other"
+                                        onChange={this.updateInput}
+                                        name="jobType" />
                                         <label for="other" className="custom-control-label">Other</label>
                                     </div>
                                 </div>
@@ -360,11 +482,17 @@ class ApplicationForm extends React.Component {
                             <div className="form-row">
                                 <div className="form-group col-md-3">
                                     <label form="dataJoining">Date Of Joining</label>
-                                    <input type="date" className="form-control" id="dataJoining" name="dataJoining" />
+                                    <input type="date" className="form-control"
+                                    value={this.state.otherDetails.doj}
+                                    onChange={this.updateInput}
+                                    id="dataJoining" name="doj" />
                                 </div>
                                 <div className="form-group col-md-3">
                                     <label for="timeJoining">Time Of Joining</label>
-                                    <input type="time" className="form-control" id="timeJoining" name="timeJoining" />
+                                    <input type="time" className="form-control" 
+                                    value={this.state.otherDetails.toj}
+                                    onChange={this.updateInput}
+                                    id="timeJoining" name="toj" />
                                 </div>
                             </div>
 
@@ -374,19 +502,25 @@ class ApplicationForm extends React.Component {
                                 </div>
                                 <div className="form-check col-md-3">
                                     <div className="custom-control custom-radio custom-control-inline">
-                                        <input type="radio" className="custom-control-input" id="khartoum" name="jobLocation" />
+                                        <input type="radio" className="custom-control-input"
+                                        onChange={this.updateInput}
+                                        id="khartoum" name="preferredLocation" />
                                         <label for="khartoum" className="custom-control-label">Khartoum</label>
                                     </div>
                                 </div>
                                 <div className="form-check col-md-3">
                                     <div className="custom-control custom-radio custom-control-inline">
-                                        <input type="radio" className="custom-control-input" id="qairo" name="jobLocation" />
+                                        <input type="radio" className="custom-control-input"
+                                        onChange={this.updateInput}
+                                        id="qairo" name="preferredLocation" />
                                         <label for="qairo" className="custom-control-label">Qairo</label>
                                     </div>
                                 </div>
                                 <div className="form-check col-md-3">
                                     <div className="custom-control custom-radio custom-control-inline">
-                                        <input type="radio" className="custom-control-input" id="dubai" name="jobLocation" />
+                                        <input type="radio" className="custom-control-input"
+                                        onChange={this.updateInput}
+                                        id="dubai" name="preferredLocation" />
                                         <label for="dubai" className="custom-control-label">Dubai</label>
                                     </div>
                                 </div>
@@ -397,13 +531,17 @@ class ApplicationForm extends React.Component {
                                 </id>
                                 <div className="form-check col-md-3">
                                     <div className="custom-control custom-radio custom-control-inline">
-                                        <input type="radio" id="yes" name="wrk" className="custom-control-input" />
+                                        <input type="radio" id="yes" name="relocateToKhartoum" 
+                                        onChange={this.updateInput}
+                                        className="custom-control-input" />
                                         <label for="yes" className="custom-control-label">Yes</label>
                                     </div>
                                 </div>
                                 <div className="form-check col-md-3">
                                     <div className="custom-control custom-radio custom-control-inline">
-                                        <input type="radio" id="no" name="wrk" className="custom-control-input" />
+                                        <input type="radio" id="no" name="relocateToKhartoum" 
+                                        onChange={this.updateInput}
+                                        className="custom-control-input" />
                                         <label for="no" className="custom-control-label">No</label>
                                     </div>
                                 </div>
@@ -418,7 +556,9 @@ class ApplicationForm extends React.Component {
                             <div className="form-rwo">
                                 <div className="form-group col">
                                     <div className="custom-control custom-checkbox custom-control-inline">
-                                        <input type="checkbox" className="custom-control-input" id="terms" />
+                                        <input type="checkbox" className="custom-control-input"
+                                        onChange={this.updateInput}
+                                        name="terms" id="terms" />
                                         <label for="terms" className="custom-control-label"> I am here declaring that all the above mentioned information is ture as per my knowledge.</label>
                                     </div>
                                 </div>
