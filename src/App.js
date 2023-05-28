@@ -1,4 +1,5 @@
 import './App.css';
+import AuthUser from './components/Pages/AuthUser';
 import Navbar from "./components/layouts/Navbar";
 
 
@@ -8,7 +9,7 @@ function App() {
       <header className="App-header">
         <Navbar />
 
-       
+       <AuthUser/>
       </header>
     </div>
   );
