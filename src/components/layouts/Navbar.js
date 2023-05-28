@@ -4,8 +4,8 @@ class Navbar extends React.Component {
     render() {
         return (
             <React.Fragment>
-                <nav className="navbar navbar-expand-md navbar-dark bg-dark">
-                    <a href="/" className="navbar-brand">Online Application Form</a>
+                <nav className="navbar navbar-expand-md navbar-dark bg-success">
+                    <a href="/" className="navbar-brand">React with Condition and Looping</a>
                     <button type="button" className="navbar-toggler" data-toggle="collapse" data-target="#mainNavbar">
                         <span className="navbar-toggler-icon"></span>
                     </button>
