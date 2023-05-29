@@ -38,7 +38,7 @@ class EmployeeCard extends React.Component{
     render(){
         return(
             <React.Fragment>
-                <div className="container mt-3">
+                <div className="container bg-info mt-3">
                     <div className="row">
                         <div className="col">
                             <ul className="list-group bg-light">
@@ -48,6 +48,24 @@ class EmployeeCard extends React.Component{
                                 <li className="list-group-item">Age : {this.state.employees[0].age}</li>
                                 <li className="list-group-item">designation : {this.state.employees[0].designation}</li>
                                 <li className="list-group-item">address : {this.state.employees[0].address}</li>
+                            </ul>
+
+                            <ul className="list-group bg-light mt-3">
+                                <li className="list-group-item">SNO :  {this.state.employees[1].sno}</li>
+                                <li className="list-group-item">first Name : {this.state.employees[1].fName}</li>
+                                <li className="list-group-item">Middle Name : {this.state.employees[1].MName}</li>
+                                <li className="list-group-item">Age : {this.state.employees[1].age}</li>
+                                <li className="list-group-item">designation : {this.state.employees[1].designation}</li>
+                                <li className="list-group-item">address : {this.state.employees[1].address}</li>
+                            </ul>
+
+                            <ul className="list-group bg-light mt-3">
+                                <li className="list-group-item">SNO :  {this.state.employees[2].sno}</li>
+                                <li className="list-group-item">first Name : {this.state.employees[2].fName}</li>
+                                <li className="list-group-item">Middle Name : {this.state.employees[1].MName}</li>
+                                <li className="list-group-item">Age : {this.state.employees[2].age}</li>
+                                <li className="list-group-item">designation : {this.state.employees[2].designation}</li>
+                                <li className="list-group-item">address : {this.state.employees[2].address}</li>
                             </ul>
                         </div>
                     </div>
