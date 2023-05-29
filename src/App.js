@@ -1,8 +1,8 @@
 import './App.css';
-import MiddleWareCard from './components/Pages/MiddelwareCard';
+import MiddleWareCard from './components/Pages/advanse/MiddelwareCard';
 import ParentCoponent from './components/Pages/Basic/ParentCoponent';
 
-import ParentTyping from './components/Pages/ParentTyping';
+import ParentTyping from './components/Pages/mediam/ParentTyping';
 
 
 import Navbar from "./components/layouts/Navbar";
