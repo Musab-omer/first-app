@@ -1,5 +1,6 @@
 import './App.css';
 import AuthUser from './components/Pages/AuthUser';
+import Customers from './components/Pages/Customers';
 import EmployeeCard from './components/Pages/EmployeeCard';
 import Hobies from './components/Pages/Hobies';
 import HobiesRadio from './components/Pages/HobiesRadio';
@@ -15,7 +16,8 @@ function App() {
        {/* <AuthUser/> */}
        {/* <Hobies/> */}
        {/* <HobiesRadio /> */}
-       <EmployeeCard/>
+       {/* <EmployeeCard/> */}
+       <Customers/>
       </header>
     </div>
   );
