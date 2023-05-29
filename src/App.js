@@ -1,5 +1,8 @@
 import './App.css';
 import AuthUser from './components/Pages/AuthUser';
+import EmployeeCard from './components/Pages/EmployeeCard';
+import Hobies from './components/Pages/Hobies';
+import HobiesRadio from './components/Pages/HobiesRadio';
 import Navbar from "./components/layouts/Navbar";
 
 
@@ -9,7 +12,10 @@ function App() {
       <header className="App-header">
         <Navbar />
 
-       <AuthUser/>
+       {/* <AuthUser/> */}
+       {/* <Hobies/> */}
+       {/* <HobiesRadio /> */}
+       <EmployeeCard/>
       </header>
     </div>
   );
