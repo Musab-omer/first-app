@@ -6,6 +6,7 @@ import ParentTyping from './components/Pages/mediam/ParentTyping';
 
 
 import Navbar from "./components/layouts/Navbar";
+import ContactApp from './components/Pages/contactApp/ContactApp';
 
 
 function App() {
@@ -21,7 +22,9 @@ function App() {
 
         {/* <ParentTyping /> */}
 
-        <MiddleWareCard />
+        {/* <MiddleWareCard /> */}
+
+        <ContactApp/>
 
       </header>
     </div>
