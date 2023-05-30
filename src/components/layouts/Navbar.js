@@ -8,8 +8,7 @@ class Navbar extends React.Component {
                     <a href="/" className="navbar-brand">React with Props Drilling and Contxt Api</a>
                     <button type="button" className="navbar-toggler" data-toggle="collapse" data-target="#mainNavbar">
                         <span className="navbar-toggler-icon"></span>
-                    </button>
-                    
+                    </button>   
                 </nav>
             </React.Fragment>
         );
