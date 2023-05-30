@@ -9,7 +9,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import 'mdbootstrap/css/mdb.min.css';
 
 import 'bootstrap/js/dist/collapse';
-import './style.css';
+//import './style.css';
 
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
