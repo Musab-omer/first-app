@@ -36,14 +36,15 @@ class ClientCard extends React.Component {
                                     <p className="h4">Client</p>
                                 </div>
                                 <div className="card-body">
-                                    <form className="form-inline">
+                                    <form className="form-inline" onSubmit={this.SendToMiddelware}>
                                         <div className="form-group">
                                             <input type="text"  className="form-control"
                                             value={this.state.cMessage}
                                             // onChange={this.updateInput}
                                             onChange={e => this.setState({cMessage: e.target.value})}
                                             placeholder="message..."/>
-                                            <button className="btn btn-success btn-sm" onClick={this.SendToMiddelware}>Send</button>
+                                            {/* <button className="btn btn-success btn-sm" onClick={this.SendToMiddelware}>Send</button> */}
+                                            <input type="submit" value="send" className="btn btn-success btn-sm"/>
                                         </div>
                                     </form>
                                 </div>
