@@ -1,4 +1,6 @@
 import './App.css';
+import CustomersCards from './components/Pages/CustomersCards';
+import UsersList from './components/Pages/UsersList';
 
 
 
@@ -10,20 +12,22 @@ class App extends Component {
   constructor(props) {
     super(props);
 
-  
-}
 
-render() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <Navbar />
+  }
 
+  render() {
+    return (
+      <div className="App">
+        <header className="App-header">
+          <Navbar />
 
-      </header>
-    </div>
-  );
-}
+          {/* <UsersList /> */}
+
+          <CustomersCards/>
+        </header>
+      </div>
+    );
+  }
 }
 export default App;
 
