@@ -5,7 +5,7 @@ class Navbar extends React.Component {
         return (
             <React.Fragment>
                 <nav className="navbar navbar-expand-md navbar-dark bg-success">
-                    <a href="/" className="navbar-brand">React with Props Drilling and Contxt Api</a>
+                    <a href="/" className="navbar-brand">React with Axios Http</a>
                     <button type="button" className="navbar-toggler" data-toggle="collapse" data-target="#mainNavbar">
                         <span className="navbar-toggler-icon"></span>
                     </button>   
