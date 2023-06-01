@@ -1,4 +1,6 @@
 import React from "react";
+import GithubProfileCard from './GithubProfileCard';
+import GithubProfileDetails from './GithubProfileDetails'
 
 class GithubProfile extends React.Component{
     constructor(props) {
@@ -9,7 +11,16 @@ class GithubProfile extends React.Component{
     render() {
         return (
             <React.Fragment>
-                <h1>GitHub Profile</h1>
+               <div className="container">
+                <div className="row">
+                    <div className="col-md-4">
+                    <GithubProfileCard/>
+                    </div>
+                    <div className="col-md-8">
+                        <GithubProfileDetails/>
+                    </div>
+                </div>
+               </div>
             </React.Fragment>
         );
     }
