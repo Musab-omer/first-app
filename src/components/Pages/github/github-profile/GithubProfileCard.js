@@ -16,6 +16,7 @@ class GithubProfileCard extends React.Component{
                                 <img src={image} className="card-img" alt="" />
                                 <p className="card-title">Musab Mohamemd</p>
                                 <p className="card-text">Occaecat non culpa non laborum enim commodo consectetur dolore ipsum cupidatat ipsum dolore mollit.</p>
+                                <button className="btn btn-success btn-sm">profile</button>
                             </div>
                         </div>
                     
