@@ -1,6 +1,7 @@
 import './App.css';
 import CustomersCards from './components/Pages/CustomersCards';
 import UsersList from './components/Pages/UsersList';
+import ContactApp from './components/contact-app/ContactApp';
 
 
 
@@ -23,7 +24,11 @@ class App extends Component {
 
           {/* <UsersList /> */}
 
-          <CustomersCards/>
+          {/* <CustomersCards/> */}
+
+          {/*  ----------- Contact App example -------- */}
+
+          <ContactApp/>
         </header>
       </div>
     );
