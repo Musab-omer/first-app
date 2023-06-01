@@ -1,6 +1,6 @@
 import React from "react";
 
-class GithubRepos extends React.Component{
+class GithubProfile extends React.Component{
     constructor(props) {
         super(props);
         
@@ -9,10 +9,10 @@ class GithubRepos extends React.Component{
     render() {
         return (
             <React.Fragment>
-                
+                <h1>GitHub Profile</h1>
             </React.Fragment>
         );
     }
     
 }
-export default GithubRepos;
+export default GithubProfile;

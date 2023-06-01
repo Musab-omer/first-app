@@ -1,5 +1,5 @@
 import './App.css';
-import GithubSearchApp from './components/Pages/GithubSearchApp';
+import GithubSearchApp from './components/Pages/github/GithubSearchApp';
 
 import Navbar from "./components/layouts/Navbar";
 import React, { Component } from 'react';

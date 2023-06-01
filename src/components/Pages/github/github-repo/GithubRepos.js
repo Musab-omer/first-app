@@ -1,6 +1,6 @@
 import React from "react";
 
-class GithubSearchApp extends React.Component{
+class GithubRepos extends React.Component{
     constructor(props) {
         super(props);
         
@@ -9,12 +9,10 @@ class GithubSearchApp extends React.Component{
     render() {
         return (
             <React.Fragment>
-               <div className="container bg-light">
-                <h1>Main container</h1>
-               </div>
+                <h1>Git Repos</h1>
             </React.Fragment>
         );
     }
     
 }
-export default GithubSearchApp;
+export default GithubRepos;
