@@ -4,6 +4,7 @@ import React from "react";
 import { CLIENT_ID, CLIENT_SECRET } from "../credentials/GithubCredentialse";
 import GithubProfileCard from "./GithubProfileCard";
 import GithubProfileDetails from "./GithubProfileDetails";
+import GithubRepos from "../github-repo/GithubRepos"
 
 class GithubSearch extends React.Component {
     constructor(props) {
@@ -99,6 +100,11 @@ class GithubSearch extends React.Component {
                                     </React.Fragment>:null
                                 }
                                 
+                            </div>
+                        </div>
+                        <div className="row">
+                            <div className="col">
+                            <GithubRepos reposDetails={this.state.githubRepos}/>
                             </div>
                         </div>
                     </div>
