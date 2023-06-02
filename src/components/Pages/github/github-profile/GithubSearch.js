@@ -102,7 +102,7 @@ class GithubSearch extends React.Component {
                                 
                             </div>
                         </div>
-                        <div className="row">
+                        <div className="row mt-3">
                             <div className="col">
                             <GithubRepos reposDetails={this.state.githubRepos}/>
                             </div>
