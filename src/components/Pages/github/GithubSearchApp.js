@@ -28,7 +28,7 @@ class GithubSearchApp extends React.Component {
                         <div className="col">
                             <GitHubSearch getData={this.githubUserDetails}/>
                             {/* <GitHubProfile profileDetails={this.state.userProfile}/> */}
-                            <GithubRepos reposDetails={this.state.userRepos}/>
+                            {/* <GithubRepos reposDetails={this.state.userRepos}/> */}
                             {/* User Profile <pre>{JSON.stringify(this.state.userProfile)}</pre>
                             User repos <pre>{JSON.stringify(this.state.userRepos)}</pre> */}
                         </div>
