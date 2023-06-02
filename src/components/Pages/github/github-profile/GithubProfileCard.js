@@ -8,15 +8,16 @@ class GithubProfileCard extends React.Component{
     }
 
     render() {
+        let{name,avatar_url,bio}=this.props.profile;
         return (
             <React.Fragment>
                 
                         <div className="card">
                             <div className="card-body">
-                                <img src={image} className="card-img" alt="" />
-                                <p className="card-title">Musab Mohamemd</p>
-                                <p className="card-text">Occaecat non culpa non laborum enim commodo consectetur dolore ipsum cupidatat ipsum dolore mollit.</p>
-                                <button className="btn btn-success btn-sm">profile</button>
+                                <img src={avatar_url} className="card-img" alt="" />
+                                <p className="card-title">{name}</p>
+                                <p className="card-text">{bio}</p>
+                                <a href="" className="btn btn-success btn-sm">profile</a>
                             </div>
                         </div>
                     
