@@ -9,15 +9,16 @@ class GithubProfile extends React.Component{
     }
 
     render() {
+       
         return (
             <React.Fragment>
                <div className="container">
                 <div className="row">
                     <div className="col-md-4">
-                    <GithubProfileCard/>
+                    <GithubProfileCard profile={this.props.profileDetails}/>
                     </div>
                     <div className="col-md-8">
-                        <GithubProfileDetails/>
+                        <GithubProfileDetails profile={this.props.profileDetails}/>
                     </div>
                 </div>
                </div>
