@@ -4,7 +4,7 @@ class Navbar extends React.Component {
     render() {
         return (
             <React.Fragment>
-                <nav className="navbar navbar-expand-md navbar-dark bg-success">
+                <nav className="navbar navbar-expand-md navbar-dark bg-dark">
                     <a href="/" className="navbar-brand">GitHub Profile</a>
                     <button type="button" className="navbar-toggler" data-toggle="collapse" data-target="#mainNavbar">
                         <span className="navbar-toggler-icon"></span>
