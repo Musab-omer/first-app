@@ -9,6 +9,7 @@ import Home from './components/Pages/Home';
 import Employees from './components/Pages/employees/Employees';
 import Stocks from './components/Pages/stocks/Stocks';
 import About from './components/Pages/About';
+import Employee from './components/Pages/employees/EmployeeDetails';
 class App extends Component {
   constructor(props) {
     super(props);
@@ -24,8 +25,9 @@ class App extends Component {
             <Routes>
               <Route exact path='/' element={<Home/>} />
               <Route exact path='/employees/list' element={<Employees/>}/>
-              <Route exact path='/stocks/list' element={<Stocks/>}/>
+              <Route exact path='/stocks/list' Component={Stocks}/>
               <Route exact path='/about' Component={About}/>
+              <Route exact path='employees/:id' Component={Employee}/>
             </Routes>
           </BrowserRouter>
         </header>
