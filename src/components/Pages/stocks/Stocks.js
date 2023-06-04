@@ -43,7 +43,7 @@ class Stocks extends React.Component {
                     <div className="row">
                         <div className="col">
                             <table id="dtBasicExample" className="table table-hover table-striped table-sm table-dark text-center">
-                                <thead className="bg-warning font-weight-bold text-uppercase">
+                                <thead className="bg-warning text-dark text-uppercase">
                                     <tr>
                                         <th>SNO</th>
                                         <th>Name</th>
