@@ -39,7 +39,7 @@ class Employees extends React.Component {
                     <div className="row">
                         <div className="col">
                             <table className="table table-dark table-sm table-responsive-md table-hover table-striped text-center">
-                                <thead className="bg-warning text-dark">
+                                <thead className="bg-warning text-dark text-uppercase">
                                     <tr>
                                         <th>SNO</th>
                                         <th>Image</th>
