@@ -9,6 +9,8 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import 'mdbootstrap/css/mdb.min.css';
 
 import 'bootstrap/js/dist/collapse';
+
+import 'bootstrap-icons/font/bootstrap-icons.css';
 //import './style.css';
 
 
