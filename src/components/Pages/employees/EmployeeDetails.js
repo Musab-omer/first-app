@@ -47,7 +47,7 @@ class Employee extends React.Component {
                                                     <div className="col-md-3 text-center">
                                                         <img src={employee.picture.large} className="img-fluid  img-thumbnail w-75" alt="" />
                                                         <p className="card-text mt-2">Do irure anim qui occaecat non laboris sint eiusmod non cillum.</p>
-                                                        <Link to="/employees/list" className="btn btn-dark btn-sm">Back</Link>
+                                                        <Link to="/employees/list" className="btn btn-dark btn-sm"><i className="bi bi-arrow-left-circle"></i> Back</Link>
                                                     </div>
                                                     <div className="col-md-5">
                                                         <ul className="list-group">
@@ -60,7 +60,7 @@ class Employee extends React.Component {
                                                         </ul>
                                                     </div>
                                                     <div className="col-md-4">
-                                                        <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d27685.318791534304!2d31.326207999999998!3d29.845094399999994!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2seg!4v1685837955687!5m2!1sen!2seg" className="border-0 img-fluid w-100 h-100" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                                                        <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d27685.318791534304!2d31.326207999999998!3d29.845094399999994!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2seg!4v1685837955687!5m2!1sen!2seg" className="border-0 img-fluid w-100 h-100" allowFullScreen="" loading="lazy" referrerPolicy="no-referrer-when-downgrade"></iframe>
                                                     </div>
                                                 </div>
                                             </div>
