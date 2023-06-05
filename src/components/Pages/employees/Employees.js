@@ -59,7 +59,7 @@ class Employees extends React.Component {
                                                     <tr key={employee.login.uuid}>
                                                         <td>{employee.login.uuid.substring(employee.login.uuid.length-4)}</td>
                                                         <td><img src={employee.picture.large} className="rounded rounded-circle" width="30px" alt=""></img></td>
-                                                        <td><Link to={`/employees/${employee.login.uuid}`} className="text-primary">{employee.name.first} {employee.name.last}</Link></td>
+                                                        <td><Link to={`/employees/${employee.login.uuid}`} className="text-primary"><i className="text-white bi bi-eye "></i> {employee.name.first} {employee.name.last}</Link></td>
                                                         <td>{employee.gender}</td>
                                                         <td>{employee.location.city}</td>
                                                         <td>{employee.phone}</td>
