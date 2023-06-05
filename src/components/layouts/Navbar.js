@@ -6,7 +6,7 @@ class Navbar extends React.Component {
     render() {
         return (
             <React.Fragment>
-                <nav className="navbar navbar-expand-sm navbar-dark bg-dark shadow-lg fixed-top">
+                <nav className="navbar navbar-expand-sm navbar-dark bg-dark  fixed-top">
                     <a href="/" className="navbar-brand">React Routing</a>
                     <button type="button" className="navbar-toggler" data-toggle="collapse" data-target="#mainNavbar">
                         <span className="navbar-toggler-icon"></span>
