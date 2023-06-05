@@ -11,6 +11,7 @@ class Stocks extends React.Component {
 
     }
 
+   
     componentDidMount = () => {
         let dataUrl = "https://gist.githubusercontent.com/Musab-omer/e0d8f63c6eff9cea5f488e24a110d795/raw/4a0ec7593acd7400022fca3c0b886182c732a7c2/stocks-03-06-2023.json";
         axios.get(dataUrl).then(respons => {
@@ -38,11 +39,12 @@ class Stocks extends React.Component {
                         <div className="col">
                             <h1 className="mt-5">Stocks</h1>
                             <p className="text-justify lead">Sint eu commodo anim ut labore. Ut eiusmod exercitation laborum eiusmod in adipisicing ex ullamco nostrud consectetur ex pariatur dolore ut. Voluptate culpa duis qui sunt adipisicing id excepteur. Sint ipsum sit pariatur nulla.</p>
+                            
                         </div>
                     </div>
                     <div className="row">
                         <div className="col">
-                            <table id="dtBasicExample" className="table table-hover table-striped table-sm table-dark text-center">
+                            <table id="example" className="table table-hover table-striped table-responsive-sm table-dark text-center">
                                 <thead className="bg-warning text-dark text-uppercase">
                                     <tr>
                                         <th>SNO</th>
