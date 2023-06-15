@@ -4,13 +4,25 @@ import myImg from '../../assets/imgs/_DSC6232.jpg';
 class About extends React.Component {
     constructor(props) {
         super(props);
-
+        this.state={
+            name:'',
+            subject:'',
+            email:'',
+            message:''
+        }
     }
 
+    updateContact=(event)=>{
+        this.setState({
+            ...this.state,
+            [event.target.name]:event.target.value
+        });
+    }
     sendMessage = (e) => {
         let form = document.getElementById('contactForm');
         if (form.checkValidity() === true) {
-            // alert("musab");
+           alert(JSON.stringify(this.state));
+           //alert("musab");
             e.preventDefault();
             e.stopPropagation();
         }
@@ -26,11 +38,12 @@ class About extends React.Component {
                             <p className="h2">So , who am I ?</p>
                             <p className="text-monospace">Have 5+ years of Professional experience in developing Web-based, Client/Server applications, Internet/Intranet applications and Windows-based applications using Microsoft Technologies </p>
                             <div className="pt-5">
-                                <a href="https://www.facebook.com/musab.katry/" className="text-dark mx-2" target="_blank"><i className=" bi bi-facebook"></i></a>
-                                <a href="" className="text-dark mx-2" target="_blank"><i className="bi bi-twitter"></i></a>
-                                <a href="https://www.youtube.com/@CodeWithMusab" target="_blank" className="text-dark mx-2"><i className="bi bi-youtube"></i></a>
-                                <a href="" target="_blank" className="text-dark mx-2"><i className="bi bi-linkedin"></i></a>
+                                <a href="https://www.facebook.com/musab.katry/" className="text-blue mx-2" target="_blank"><i className=" bi bi-facebook"></i></a>
                                 <a href="https://github.com/Musab-omer" target="_blank" className="text-dark mx-2"><i className="bi bi-github"></i></a>
+                                <a href="" className="text-prmary mx-2" target="_blank"><i className="bi bi-twitter"></i></a>
+                                <a href="https://www.youtube.com/@CodeWithMusab" target="_blank" className="text-danger mx-2"><i className="bi bi-youtube"></i></a>
+                                <a href="" target="_blank" className="text-info mx-2"><i className="bi bi-linkedin"></i></a>
+                               
 
                             </div>
                         </div>
@@ -48,24 +61,38 @@ class About extends React.Component {
                                     <p className="h4">Contact Us</p>
                                 </div>
                                 <div className="card-body">
-                                    <form className=" my-2" id="contactForm" noValidate>
+                                    <form className=" my-2" id="contactForm" novalidate>
                                         <div className="form-group">
-                                            <label>Name*</label>
-                                            <input type="text" className="form-control" placeholder="Your Name" required />
+                                            {/* <label>Name*</label> */}
+                                            <input type="text" className="form-control" name="name"
+                                            value={this.state.name}
+                                            onChange={this.updateContact}
+                                            placeholder="Your Name" required />
                                         </div>
                                         <div className="form-group">
-                                            <label>Subject</label>
-                                            <input type="text" className="form-control" placeholder="Message Subject" />
+                                            {/* <label>Subject</label> */}
+                                            <input type="text" className="form-control" name="subject"
+                                            value={this.state.subject}
+                                            onChange={this.updateContact}
+                                            placeholder="Message Subject" />
                                         </div>
                                         <div className="form-group">
-                                            <label>Email*</label>
-                                            <input type="text" className="form-control" placeholder="Your Email" required />
+                                            {/* <label>Email*</label> */}
+                                            <input type="text" className="form-control" name="email" 
+                                            value={this.state.email}
+                                            onChange={this.updateContact}
+                                            placeholder="Your Email" required />
                                         </div>
                                         <div className="form-group">
-                                            <label>Message</label>
-                                            <textarea cols="30" rows="5" className="form-control" placeholder="Your Message ..." required />
+                                            {/* <label>Message</label> */}
+                                            <textarea cols="30" rows="5" className="form-control" name="message"
+                                            value={this.state.message}
+                                            onChange={this.updateContact}
+                                            placeholder="Your Message ..." required />
                                         </div>
                                         <button type="submit" onClick={this.sendMessage} className="btn btn-dark"  ><i className="bi bi-send"></i> Send</button>
+                                        {/* <a href="mailto:mosab.katry@gmail.com?subject='Hello from Mohammed jallay!'&body='Just popped in to say hello'">Click to send an Email</a> */}
+                                        <a href={`mailto:${this.state.email}?subject=${this.state.subject}&body=${this.state.message}`}>Click to Send an Email</a>
                                     </form>
                                 </div>
                             </div>
